@@ -1,0 +1,48 @@
+.s1 { background-color: #ccc; }
+.s3 { background-color: #ccc; }
+.s2 { background-color: #ccc; }
+.s1:link { background-color: #ccc; }
+.s1:visited { background-color: #ccc; }
+.s1:focus { background-color: #ccc; }
+.s2:focus { background-color: #ccc; }
+.s1:hover { color: #ccc; }
+.s3:active { background-color: #ccc; }
+.s1:active { background-color: #ccc; }
+@supports (display: flex) {
+  .support-flex1 { height: 8rem; }
+  .support-flex2 { width: 8rem; }
+  .support-flex:link { left: 1rem; }
+  .support-flex:visited { right: 1rem; }
+  .support-flex:focus { top: 1rem; }
+  .support-flex:hover { bottom: 1rem; }
+  .support-flex:active { position: sticky; } }
+@supports (display: grid) {
+  .support-grid1 { height: 8rem; }
+  .support-grid2 { width: 8rem; }
+  .support-grid:link { left: 1rem; }
+  .support-grid:visited { right: 1rem; }
+  .support-grid:focus { top: 1rem; }
+  .support-grid:hover { bottom: 1rem; }
+  .support-grid:active { position: sticky; } }
+@media screen and (min-width: 600px) {
+  .med-min1 { background-color: #ccc; }
+  .med-min2 { background-color: #ccc; }
+  .med-min3 { background-color: #ccc; }
+  .med-min1:link { background-color: #ccc; }
+  .med-min1:visited { background-color: #ccc; }
+  .med-min2:focus { background-color: #ccc; }
+  .med-min1:focus { background-color: #ccc; }
+  .med-min1:hover { color: #ccc; }
+  .med-min3:active { background-color: #ccc; }
+  .med-min1:active { background-color: #ccc; } }
+@media screen and (max-width: 500px) {
+  .med-max1 { background-color: #ccc; }
+  .med-max2 { background-color: #ccc; }
+  .med-max3 { background-color: #ccc; }
+  .med-max1:link { background-color: #ccc; }
+  .med-max1:visited { background-color: #ccc; }
+  .med-max2:focus { background-color: #ccc; }
+  .med-max1:focus { background-color: #ccc; }
+  .med-max1:hover { color: #ccc; }
+  .med-max3:active { background-color: #ccc; }
+  .med-max1:active { background-color: #ccc; } }

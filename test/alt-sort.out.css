@@ -1,0 +1,10 @@
+.s1 { background-color: #ccc; }
+.s2 { background-color: #ccc; }
+.s3 { background-color: #ccc; }
+.s1:link { background-color: #ccc; }
+.s1:visited { background-color: #ccc; }
+.s1:hover { color: #ccc; }
+.s1:focus { background-color: #ccc; }
+.s2:focus { background-color: #ccc; }
+.s3:active { background-color: #ccc; }
+.s1:active { background-color: #ccc; }
