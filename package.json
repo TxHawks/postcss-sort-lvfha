@@ -1,0 +1,77 @@
+{
+  "name": "postcss-sort-lvfha",
+  "version": "0.0.0-development",
+  "description": "PostCSS plugin to sort stateful pseudo-selector rulesets based on lvfha logic",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "sort",
+    "pseudo-selectors"
+  ],
+  "scripts": {
+    "gc": "git cz",
+    "format": "eslint . --fix",
+    "test:watch": "jest --watch",
+    "test": "eslint . --fix && jest",
+    "semantic-release": "semantic-release"
+  },
+  "author": "TxHawks",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TxHawks/postcss-sort-lvfha.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TxHawks/postcss-sort-lvfha/issues"
+  },
+  "homepage": "https://github.com/TxHawks/postcss-sort-lvfha",
+  "dependencies": {
+    "postcss": "^7.0.27"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "chalk": "^3.0.0",
+    "commitizen": "^4.0.3",
+    "cross-spawn": "^7.0.1",
+    "cz-conventional-changelog": "^3.1.0",
+    "doctoc": "^1.4.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-security": "^1.4.0",
+    "glob": "^7.1.6",
+    "husky": ">=4",
+    "jest": "^25.1.0",
+    "lint-staged": ">=10",
+    "prettier": "^1.19.1",
+    "semantic-release": "^17.0.4"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "yarn test"
+    ],
+    "README.md" :"doctoc --github",
+    "*.{css,md}": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
