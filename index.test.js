@@ -33,4 +33,18 @@ describe('postcss-sort-lvfha', () => {
       order: [ ':link', ':visited', ':hover', ':focus', ':active', ],
     });
   });
+
+  describe('erros', () => {
+    it('throw helpful error if `order` doesn\'t exist in `options`', async () => {
+      const expectedError
+        = 'The `options` object must contain an `order` property that is an array strings setting the order in which rules will be sorted.';
+      const input = fs.readFileSync('./test/simple.in.css', 'utf8');
+      const output = fs.readFileSync('./test/simple.out.css', 'utf8');
+
+      await expect(run(input, output, {})).rejects.toThrow(expectedError);
+      await expect(run(input, output, { order: 'wrong', })).rejects.toThrow(
+        expectedError
+      );
+    });
+  });
 });

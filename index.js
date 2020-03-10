@@ -7,6 +7,11 @@ module.exports = postcss.plugin(
   (
     { order, } = { order: [ ':link', ':visited', ':focus', ':hover', ':active', ], }
   ) => root => {
+    if (!Array.isArray(order)) {
+      throw new Error(
+        'The `options` object must contain an `order` property that is an array strings setting the order in which rules will be sorted.'
+      );
+    }
     const handleAtRules = createAtRuleHandler(root, order);
 
     sortStatefull(root, order);
